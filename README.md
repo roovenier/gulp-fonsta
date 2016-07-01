@@ -26,6 +26,6 @@ gulp.task('fonsta', function() {
 
 // Pass fonts from a dependency file
 gulp.task('fonsta:deps', function() {
-	return fonsta('./fonts')
+	return fonsta(__dirname + '/fonsta.deps.json')
 });
 ```

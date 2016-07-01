@@ -11,7 +11,7 @@ gulp.task('fonsta', function() {
 });
 
 gulp.task('fonsta:deps', function() {
-	return fonsta('./fonts')
+	return fonsta(__dirname + '/fonts');
 });
 
 gulp.task('default', ['fonsta']);
