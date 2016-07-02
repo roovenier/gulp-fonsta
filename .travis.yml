@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - "6"
   - "0.12.7"
-  - "0.10.25"
+  - "0.10.20"
+  - "iojs"
 before_script: npm install -g gulp
 install: npm install
 script: gulp
