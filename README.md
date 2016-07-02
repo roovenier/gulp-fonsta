@@ -2,6 +2,8 @@
 
 Use [Fonsta](https://github.com/roovenier/fonsta) within gulp task manager.
 
+[![Build Status](https://travis-ci.org/roovenier/gulp-fonsta.svg?branch=master)](https://travis-ci.org/roovenier/gulp-fonsta) [![npm version](https://badge.fury.io/js/gulp-fonsta.svg)](https://www.npmjs.com/package/gulp-fonsta)
+
 ## Install
 
 ```sh
