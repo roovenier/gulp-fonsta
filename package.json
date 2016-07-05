@@ -1,13 +1,13 @@
 {
   "name": "gulp-fonsta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fonsta plugin for gulp",
   "repository": {
     "type": "git",
     "url": "https://github.com/roovenier/gulp-fonsta.git"
   },
   "main": "index.js",
-  "author": "Alexander Os <fastex93@gmail.com> (http://github.com/roovenier)",
+  "author": "Alex Oshchepkov <fastex93@gmail.com> (http://github.com/roovenier)",
   "license": "MIT",
   "homepage": "https://github.com/roovenier/gulp-fonsta",
   "keywords": [
@@ -19,10 +19,10 @@
     "fonsta gulp"
   ],
   "dependencies": {
-    "fonsta": "^1.0.5",
+    "es6-promise": "~3.2.1",
+    "fonsta": "^1.0.9",
     "gulp-util": "^3.0.7",
-    "through2": "^2.0.1",
-    "es6-promise": "~3.2.1"
+    "through2": "^2.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"

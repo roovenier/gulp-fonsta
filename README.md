@@ -26,8 +26,22 @@ gulp.task('fonsta', function() {
 	}, true)
 });
 
-// Pass fonts from a dependency file
+// Pass fonts from a json dependency file
 gulp.task('fonsta:deps', function() {
 	return fonsta(__dirname + '/fonsta.deps.json')
+});
+
+// Provide fonsta config options
+gulp.task('fonsta:options', function() {
+	return fonsta(
+		__dirname + '/fonsta.deps.json',
+		false,
+		{
+			tmpDir: '/temp/fonts',
+			fontsDir: '/vendor/fonts',
+			cssDir: '/vendor/css',
+			cssFile: 'vendor.css'
+		}
+	);
 });
 ```

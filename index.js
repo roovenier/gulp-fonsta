@@ -3,8 +3,9 @@ var through = require('through2');
 var gutil = require('gulp-util');
 var fonsta = require('fonsta/lib/commands/install');
 
-function gulpFonsta(fonts, isSave) {
+function gulpFonsta(fonts, isSave, options) {
 	isSave = (typeof isSave !== 'boolean') ? false : isSave;
+	options = options || {};
 
 	var stream = through();
 
@@ -28,7 +29,7 @@ function gulpFonsta(fonts, isSave) {
 	fontsArray.reduce(function(prom, font, fontIndex) {
 		return prom.then(function() {
 			return new Promise(function(resolve, reject) {
-				fonsta(font, fonts[font], isSave, false).then(function(result) {
+				fonsta(font, fonts[font], isSave, false, options).then(function(result) {
 					console.log(result.replace(/\r?\n/, ''));
 
 					if(fontIndex === fontsArray.length - 1) {

@@ -14,4 +14,17 @@ gulp.task('fonsta:deps', function() {
 	return fonsta(__dirname + '/fonts');
 });
 
+gulp.task('fonsta:options', function() {
+	return fonsta(
+		__dirname + '/fonts',
+		false,
+		{
+			tmpDir: '/temp/fonts',
+			fontsDir: '/vendor/fonts',
+			cssDir: '/vendor/css',
+			cssFile: 'vendor.css'
+		}
+	);
+});
+
 gulp.task('default', ['fonsta']);
