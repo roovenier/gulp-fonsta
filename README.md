@@ -16,14 +16,19 @@ $ npm install gulp-fonsta --save-dev
 var gulp = require('gulp');
 var fonsta = require('gulp-fonsta');
 
-// Pass font list as object and save it into dependencies file (second argument)
+// Pass font list as object and save it into dependencies file
 gulp.task('fonsta', function() {
-	return fonsta({
-		nobile: ['medium'],
-		roboto: ['regular', 'italic'],
-		'pt-sans': ['bold'],
-		'open-sans': ['bold']
-	}, true)
+	return fonsta(
+		{
+			nobile: ['medium'],
+			roboto: ['regular', 'italic'],
+			'pt-sans': ['bold'],
+			'open-sans': ['bold']
+		},
+		{
+			saveDeps: true
+		}
+	);
 });
 
 // Pass fonts from a json dependency file
@@ -35,8 +40,9 @@ gulp.task('fonsta:deps', function() {
 gulp.task('fonsta:options', function() {
 	return fonsta(
 		__dirname + '/fonsta.deps.json',
-		false,
 		{
+			saveDeps: false,
+			noCss: true,
 			tmpDir: '/temp/fonts',
 			fontsDir: '/vendor/fonts',
 			cssDir: '/vendor/css',
