@@ -1,6 +1,6 @@
 {
   "name": "gulp-fonsta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fonsta plugin for gulp",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "es6-promise": "~3.2.1",
-    "fonsta": "^1.1.0",
+    "fonsta": "^1.1.1",
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"
   },

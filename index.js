@@ -34,7 +34,11 @@ function gulpFonsta(fonts, options) {
 		return prom.then(function() {
 			return new Promise(function(resolve, reject) {
 				fonsta(font, fonts[font], flags, false, options).then(function(result) {
-					console.log(result.replace(/\r?\n/, ''));
+					result = result.replace(/\r?\n/, '').split(/\r\n|\n|\r/);
+
+					for(var i=0; i<result.length; i++) {
+						gutil.log('gulp-fonsta:', result[i]);
+					}
 
 					if(fontIndex === fontsArray.length - 1) {
 						stream.emit('end');
@@ -42,7 +46,7 @@ function gulpFonsta(fonts, options) {
 
 					resolve();
 				}, function(err) {
-					console.log(err.message.replace(/\r?\n/, ''));
+					gutil.log('gulp-fonsta:', err.message.replace(/\r?\n/, ''));
 
 					if(fontIndex === fontsArray.length - 1) {
 						stream.emit('end');
